@@ -1,0 +1,78 @@
+﻿<!DOCTYPE html>
+<html lang="en" id="rootId">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+	<title> - Book API</title>
+
+	<link rel="stylesheet" type="text/css" href="./css/style.css" />
+	<link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+	<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>
+	<script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
+		
+	<script src="./scripts/start.js"></script>
+</head>
+
+<body>
+	<div id="requestFields" class="container-fluid">
+		<!-- Page Header -->
+		<div class="jumbotron" style="background-color: lightgrey">
+			<h1 style="color: cornflowerblue">Welcome to Book Finding</h1>
+			<p style="color: brown">You can search books of your choice here.</p>
+		</div>
+
+		<!-- Page Form -->
+		<form class="form-horizonal" name="submitForm"> 
+			<div class="col-md-6">
+				<div class="form-group">
+					<label class="col-sm-3 control-label">Search Method</label>
+					<div class="col-sm-9">
+						<select id="searchField" class="form-control" style="height:100%">
+							<option value="author">Author</option>
+							<option value="title">Title</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="author choice" >
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Enter author of the book</label>
+						<div class="col-sm-9">
+							<input id="authorId" autocomplete="off" type="text" class="form-control" placeholder="Some author's name" required />
+						</div>
+					</div>
+				</div>
+
+				<div class="title choice">
+					<div class="form-group">
+						<label class="col-sm-3 control-label">Enter title of the book</label>
+						<div class="col-sm-9">
+							<input id="titleId" autocomplete="off" type="text" class="form-control" placeholder="Some title of the book" required />
+						</div>
+					</div>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label">How many results to display (Max 40, Default 10)</label>
+					<div class="col-sm-9">
+						<input id="quotaId" autocomplete="off" type="text" class="form-control" placeholder="Max 40 displayed results, Default is 10" required/>
+					</div>
+				</div>
+
+				<div class="form-action text-center">
+					<button id="button" disable type="button" class="btn btn-primary" onclick="doSearch()"> Search </button>
+				</div>
+
+				<div class="form-group">
+					<label class="col-sm-3 control-label">Result</label>
+					<div class="col-sm-9">
+						<textarea id="resultId" class="form-control" placeholder="Displayed Results" onkeyup="autoGrow(this)" rows="20" disabled></textarea>
+					</div>
+				</div>
+			</div>
+		</form>		
+	</div>
+</body>
+</html>
