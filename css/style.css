@@ -1,0 +1,14 @@
+.form-group {	
+	position: relative;
+}
+.form-control {
+	margin-bottom: 15px;
+}
+.form-action{
+	margin-bottom: 15px;
+}
+textarea {
+	background-color: darkcyan !important;
+	color: white !important;
+	font-size: medium !important;
+}
