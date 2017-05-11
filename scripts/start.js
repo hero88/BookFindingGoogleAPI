@@ -34,16 +34,14 @@ function doSearch() {
 	{		
 		// Create correct URL
 		urlAuthor = url + "inauthor:" + author + "&maxResults=" + maxCount + "&key=" + apiKey;
-		urlSearch = urlAuthor;
-		console.log(urlSearch);
+		urlSearch = urlAuthor;		
 	}		
 
 	if (title != "")
 	{		
 		// Create correct URL
 		urlTitle = url + "intitle:" + title + "&maxResults=" + maxCount + "&key=" + apiKey;
-		urlSearch = urlTitle;
-		console.log("  adag   " + maxCount + "   abc   "+ urlTitle);
+		urlSearch = urlTitle;		
 	}
 
 		// do book search from Google Book API
