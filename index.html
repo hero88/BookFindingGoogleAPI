@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en" id="rootId">
 <head>
 	<meta charset="UTF-8">
@@ -13,6 +13,7 @@
 	<script type="text/javascript" src="https://www.google.com/books/jsapi.js"></script>
 		
 	<script src="./scripts/start.js"></script>
+	<script src="./scripts/search.js"></script>
 </head>
 
 <body>
@@ -68,7 +69,21 @@
 				<div class="form-group">
 					<label class="col-sm-3 control-label">Result</label>
 					<div class="col-sm-9">
-						<textarea id="resultId" class="form-control" placeholder="Displayed Results" onkeyup="autoGrow(this)" rows="20" disabled></textarea>
+						<!-- Table to display results -->
+						<table class="table table-bordered" id="resultId">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th id="titleHeader" onclick="sortTable(1)">Title</th>
+									<th id="authorHeader" onclick="sortTable(2)">Author</th>
+									<th id="dateHeader" onclick="sortTable(3)">Published Date</th>
+								</tr>
+							</thead>
+							<tbody id="tbdata">
+								<!--data will go here-->							
+							</tbody>
+																
+						</table>						
 					</div>
 				</div>
 			</div>
